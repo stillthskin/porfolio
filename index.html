@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Profile</title>
+	<link rel="icon"  type="image/png" href="images/bg.png" sizes="60x60"  />
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+</head>
+<body>
+<section id="top">
+	<header>
+		<h1></h1>
+		<nav class="nav">
+			<ul>
+				<li><a href="#about">About</a></li>
+				<li><a href="#services">Services</a></li>
+				<li><a href="#projects">Projects</a></li>
+				<li><a href="#contact">Contact</a></li>
+			</ul>
+		</nav>
+	</header>
+
+		<section id="about">
+			<nav class="imgsect"><img src="./images/bg.png"></nav>
+			<nav class="descsect">
+			<h2>Mr. Dennis Kenda</h2>
+			<div class="introI"><span class="staticI">I'm: </span><ul class="dynaI">
+				                                                       <li><span>Dev</span></li>
+				                                                       <li><span>Pentest</span></li>
+			                                                           <li><span>To Be Reviewed</span></li>
+																	</ul>
+																</div>
+<br>
+			<p id="my_intro">Hello! I'm a web developer with a passion for creating beautiful and functional websites. I have been working in the field for several years, honing my skills in a variety of programming languages, including HTML, CSS, JavaScript, and PHP.
+
+My approach to web development is focused on creating user-friendly and responsive websites that meet the unique needs of each client. I believe that good design should not only look great, but also be intuitive and easy to navigate.
+
+Over the years, I have had the pleasure of working with a diverse range of clients, from small businesses to large corporations. Each project has presented its own set of challenges, and I am always excited to tackle new and exciting projects.
+
+In addition to my technical skills, I am also a strong communicator and collaborator. I believe that effective communication is key to any successful project, and I am committed to keeping my clients informed and involved every step of the way.
+
+When I'm not coding, you can usually find me exploring new hiking trails or trying out new recipes in the kitchen. I believe that a healthy work-life balance is essential to staying motivated and focused in my work.
+
+Thank you for taking the time to learn a little bit about me. I look forward to the opportunity to work with you and help bring your website vision to life!</p>
+		
+<button id="read_more_btn" onclick="myFunction()">Read More</button>
+</section>
+
+	</section>
+		<section id="services">
+			<h3>Skill Set:</h3>
+			<ol>
+				<li>Computer  programming</li>
+				<li>Web Development</li>
+				<li>Responsive Design</li>
+				<li>Search Engine Optimization</li>
+			</ol>
+		</section>
+
+		<section id="projects">
+			<h3>Projects:</h3>
+			<ul>
+				<li><a href=""><img src="./images/subl1.jpg">Project I</a></li>
+				<li><a href="#"><img src="./images/subl2.jpg">Project II</a></li>
+				<li><a href="#"><img src="./images/subl1.jpg">Project III</a></li>
+			</ul>
+		</section>
+
+		<section id="contact">
+			<h3>Contact:</h3>
+			<form>
+				<label for="name">Name:</label>
+				<input type="text" id="name" name="name" required>
+
+				<label for="email">Email:</label>
+				<input type="email" id="email" name="email" required>
+
+				<label for="message">Message:</label>
+				<textarea id="message" name="message" required></textarea>
+
+				<button type="submit">Submit</button>
+			</form>
+		</section>
+	</main>
+
+	<footer class="foot">
+		<div class="social">
+		Find me on my social media:<br>
+		<ul>	
+			<li><a href="https://www.linkedin.com">LinkedIn</a></li>
+			<li><a href="https://www.linkedin.com">GitHub</a></li>
+			<li><a href="https://www.linkedin.com">CodePen</a></li>
+		</ul>
+		</div>
+		<p class="copywright"><b>&copy<span id="copydate"></span></b> Web Developer Portfolio. All rights reserved.</p>
+	</footer>
+	<script language="javascript" type="text/javascript">
+		function date_time() {
+			const monthNames = ["January", "February", "March", "April", "May", "June",
+  "July", "August", "September", "October", "November", "December"
+];
+			var dt = new Date();
+			var yr = dt.getFullYear().toString();
+			var mnt = monthNames[dt.getMonth()].toString();
+			var fulldt = mnt+" "+yr
+			document.getElementById("copydate").innerHTML = fulldt;
+			setTimeout(function () { date_time(); }, 1000);
+		}
+		date_time();
+moreText.style.display = "none"
+function myFunction() {
+  var moreText = document.getElementById("my_intro");
+  var btnText = document.getElementById("read_more_btn");
+  if (moreText.style.display === "none") {
+    btnText.innerHTML = "Read less";
+    moreText.style.display = "block";
+  } else {
+    moreText.style.display = "none";
+    btnText.innerHTML = "Read more";
+  }
+} 
+		</script>
+</body>
+</html>
+<!--
+<?php
+// Set the recipient email address
+$to = "recipient@example.com";
+
+// Set the subject of the email
+$subject = "Test Email";
+
+// Set the message body
+$message = "Hello, this is a test email sent from PHP.";
+
+// Set the headers
+$headers = "From: sender@example.com\r\n";
+$headers .= "Reply-To: sender@example.com\r\n";
+$headers .= "Content-type: text/plain\r\n";
+
+// Send the email using the mail() function
+if(mail($to, $subject, $message, $headers)) {
+    echo "Email sent successfully!";
+} else {
+    echo "Error sending email.";
+}
+?>
+-->
