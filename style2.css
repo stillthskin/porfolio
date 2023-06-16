@@ -34,19 +34,24 @@ header {
 	align-items: center;
 	padding: 20px;
 }
-
+.nav{
+	position: absolute;
+	right: 0;
+	top: 10px;
+}
 .nav ul {
 	list-style: none;
 	margin: 0;
 	padding: 0;
-	display: flex;
+	display: block;
+	border: solid ;
 }
 h3{
 	font-weight: 900;
 	font-size: 30px;
 }
 .nav ul li {
-	margin-right: 20px;
+	padding: 10px;
 }
 
 .nav ul li a {
@@ -74,23 +79,20 @@ h3{
 	left: 0;
 }
 #about{
-	margin-top: 100px;
+	margin-top: 10px;	
 	width: 100%;
-	padding: 30px;
-	min-height: 300px;
+	padding: 9px;
 	box-sizing: border-box;
+
 }
 #about .imgsect{
-	width: 30%;
-	float: right;
-	height: 100%;
-	align-items: end;
-	justify-content: right;
+	width: 100%;
+	height: auto;
+	align-items:center;
 }
 #about .descsect{
-	width: 70%;
-	float: left;
-	height: 100%;
+	width: 100%;
+	height:auto;
 	display: block;
 	justify-content: center;
 	align-items: center;
@@ -102,15 +104,15 @@ section {
 
 h2 {
 	margin-bottom: 20px;
-	font-size: 60px;
-	font-weight: 700;
+	font-size: 30px;
+	font-weight: 600;
 
 }
 .introI{
 	display: inline-flex;
 }
 .staticI{
-	font-size: 40px;
+	font-size: 30px;
 	font-weight: 600;
 
 }
@@ -128,6 +130,8 @@ h3{
 	height: 40px;
 	background:transparent;	
 	overflow: hidden;
+	font-size: 30px;
+	font-weight: 600;
 }
 .dynaI li span{
 	position: relative;
@@ -144,7 +148,7 @@ h3{
 	animation: typing 1.5s steps(15) infinite;
 }
 .dynaI li{
-	font-size: 40px;
+	font-size: 30px;
 	font-weight: 600;
 	color: teal;
 	top: 0px;
@@ -157,8 +161,8 @@ ul {
 	list-style: none;
 }
 #about img{
-	width: 400px;
-	height: 400px; 
+	width: 200px;
+	height: 200px; 
 	left: 0;
 }
 #projects ul{
@@ -302,9 +306,4 @@ button[type="submit"] {
   opacity: 1;
   transform: rotateX(0);
 	}
-}
-
-@media only screen and (max-width: 600px){
-
-
 }
