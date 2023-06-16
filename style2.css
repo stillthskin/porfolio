@@ -34,10 +34,18 @@ header {
 	align-items: center;
 	padding: 20px;
 }
+header #menubtn{
+	display: block;
+	padding: 15px;
+	top: 0;
+	position: absolute;
+}
 .nav{
 	position: absolute;
 	right: 0;
-	top: 10px;
+	top: 0;
+	width: 40%;
+	min-height: 70vh;
 }
 .nav ul {
 	list-style: none;
@@ -45,6 +53,7 @@ header {
 	padding: 0;
 	display: block;
 	border: solid ;
+	width: 100%;
 }
 h3{
 	font-weight: 900;
@@ -59,6 +68,8 @@ h3{
 	text-decoration: none;
 	font-weight: bold;
 	padding: 9px;
+	display: block;
+	width: 100%;
 	transition: all .5s;
 }
 .nav ul li a:hover{
@@ -79,11 +90,9 @@ h3{
 	left: 0;
 }
 #about{
-	margin-top: 10px;	
+	margin-top: 50px;	
 	width: 100%;
 	padding: 9px;
-	box-sizing: border-box;
-
 }
 #about .imgsect{
 	width: 100%;
@@ -195,7 +204,7 @@ ul {
 	background: #fff;
 	text-align: center;
 	border-radius: 15px;
-	width: 250px;
+	width: 300px;
 	list-style: none;
 	text-decoration: none;
 	box-shadow: grey 20px;
@@ -262,11 +271,11 @@ button[type="submit"] {
 
 }
 .foot .copywright{
-	margin-left: 30%;
+	margin-left: 0;
 	padding: 10px;
 }
 .foot .social ul{
-	margin-left: 35%;
+	margin-left: 15%;
 }
 .foot .social ul li{
 	display: inline-grid;
