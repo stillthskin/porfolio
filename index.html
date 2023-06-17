@@ -15,9 +15,17 @@
 <body>
 <section id="top">
 	<header>
-		<button id="menubtn"><i class="fa-solid fa-bars"></i></button>
+		<button id="menubtn"><i class="fa fa-bars"></i></button>
 		<h1></h1>
-		<nav class="nav">
+		<nav id="nav">
+			<ul>
+				<li><a href="#about">About</a></li>
+				<li><a href="#services">Services</a></li>
+				<li><a href="#projects">Projects</a></li>
+				<li><a href="#contact">Contact</a></li>
+			</ul>
+		</nav>
+		<nav id="nav2">
 			<ul>
 				<li><a href="#about">About</a></li>
 				<li><a href="#services">Services</a></li>
@@ -51,7 +59,7 @@ When I'm not coding, you can usually find me exploring new hiking trails or tryi
 
 Thank you for taking the time to learn a little bit about me. I look forward to the opportunity to work with you and help bring your website vision to life!</p>
 		
-<button id="read_more_btn" onclick="myFunction()">Read More</button>
+<button id="read_more_btn">Read More</button>
 </section>
 
 	</section>
@@ -87,7 +95,7 @@ Thank you for taking the time to learn a little bit about me. I look forward to 
 				<label for="message">Message:</label>
 				<textarea id="message" name="message" required></textarea>
 
-				<button type="submit">Submit</button>
+				<button id="submit" type="submit">Submit</button>
 			</form>
 		</section>
 	</main>
@@ -116,19 +124,42 @@ Thank you for taking the time to learn a little bit about me. I look forward to 
 			setTimeout(function () { date_time(); }, 1000);
 		}
 		date_time();
+var moreText = document.getElementById("my_intro");
+var btnText = document.getElementById("read_more_btn");
+var menubtn = document.getElementById("menubtn");
+var menu = document.getElementById("nav2");
+menu.style.display = "none";
+menubtn.addEventListener("click",function popupmenu() {
+	if (menu.style.display === "none") {
+    menu.style.display = "block";
+	console.log("Hello!");
+  } else {
+    menu.style.display = "none";
+  }
+	
+});
 moreText.style.display = "none"
-function myFunction() {
-  var moreText = document.getElementById("my_intro");
-  var btnText = document.getElementById("read_more_btn");
-  if (moreText.style.display === "none") {
+btnText.addEventListener("click",function readmore() {
+	if (moreText.style.display === "none") {
     btnText.innerHTML = "Read less";
     moreText.style.display = "block";
   } else {
     moreText.style.display = "none";
     btnText.innerHTML = "Read more";
   }
-} 
+	
+});
 		</script>
+<script type="text/javascript"
+src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+</script>
+<script type="text/javascript">
+(function(){
+emailjs.init("jnfSL9hIpXqmATE3I");
+})();
+</script>
+<script src="index.js"></script>
+
 </body>
 </html>
 <!--
