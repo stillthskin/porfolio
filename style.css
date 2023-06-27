@@ -179,6 +179,16 @@ ul {
 #contact form label{
 	font-weight: bold;
 }
+#contact a{
+	text-decoration: none;
+	color: #000;
+	font-weight: bold;
+}
+#contact .fa{
+	color: teal;
+	font-size: 21px;
+	padding: 3px;
+}
 #projects{
 	background: #fff;
 }
